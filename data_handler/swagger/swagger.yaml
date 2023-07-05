@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Software Engineer TEST API
+  description: API for test data
+  version: 1.0.0
+servers:
+- url: http://localhost:8080
+paths:
+  /data:
+    get:
+      summary: Get data
+      description: Retrieve data within a specified time range
+      operationId: get_data
+      parameters:
+      - name: from_date
+        in: query
+        description: Start date (yyyy-mm-dd)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: to_date
+        in: query
+        description: End date (yyyy-mm-dd)
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful response
+      x-openapi-router-controller: controllers.default_controller
+    post:
+      summary: Save data
+      description: "Save data with timestamp, metric_name, and metric_value"
+      operationId: create_records
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: Successful response
+      x-openapi-router-controller: controllers.default_controller
+components: {}
+

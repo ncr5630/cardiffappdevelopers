@@ -1,0 +1,6 @@
+connexion[swagger-ui]
+connexion==2.14.2
+python_dateutil ==2.8.2
+setuptools==65.6.3
+python-ulid==1.1.0
+Flask~=2.2.3
