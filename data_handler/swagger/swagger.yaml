@@ -41,6 +41,8 @@ paths:
           text/plain:
             schema:
               type: string
+              example:
+                1649941817 Voltage 1.34
         required: true
       responses:
         "200":
