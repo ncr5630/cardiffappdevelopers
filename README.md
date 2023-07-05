@@ -1,7 +1,5 @@
 # cardiffappdevelopers
 Software Engineer (Python) - Take-home Task
-# cardiffappdevelopers
-Software Engineer (Python) - Take-home Task
 
 ## Service start
 
