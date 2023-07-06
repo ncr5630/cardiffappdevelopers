@@ -33,26 +33,26 @@ curl -X 'GET' \
   'http://127.0.0.1:8080/data?from_date=2022-10-01&to_date=2023-10-01' \
   -H 'accept: */*'
 ```
-#Additional Considerations
+# Additional Considerations
 ## 1. How can we test the code to be confident in the implementation?
 ### Ans.
-###We can use unit testing, code review with seniors, proper error handling, and so on.
+#### We can use unit testing, code review with seniors, proper error handling, and so on.
 
 ## 2. How can we make sure this code is easy to maintain for future developers?
 ### Ans.
-###i .need to provide clear documentation 
-###ii. break down the code into modular components
-###iii. simple codebase without over engineering
+#### i .need to provide clear documentation 
+#### ii. break down the code into modular components
+#### iii. simple codebase without over engineering
 
 ## 3.Our API needs to be high-performance — how can we measure the performance of our API?
 ### Ans.
-###i.monitor response time 
-###ii.concurrency testing
-###iii.check database performance
+#### i.monitor response time 
+#### ii.concurrency testing
+#### iii.check database performance
 
 ## 4.How could we optimise this code if the API receives many more POST requests than GET requests? What about if the API receives many more GET requests than POST requests?
 ### Ans.
-####i.increase backend resources
-####ii.can used message queue system (i.e AWS-SQS, AZURE - SERVICE BUS)
-####iii. optimize database operations
-####iv. used aws , azure or GCP popper optimized cloud envs
+#### i.increase backend resources
+#### ii.can used message queue system (i.e AWS-SQS, AZURE - SERVICE BUS)
+#### iii. optimize database operations
+#### iv. used aws , azure or GCP popper optimized cloud envs
