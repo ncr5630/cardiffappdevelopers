@@ -45,9 +45,9 @@ class StoreData:
     def check_malformed(data):
         lines = data.split("\n")
         for line in lines:
-            pattern = r'(\d+)\s+([\d.]+)\s+(\w+)$'
+            pattern = r'(\d+)\s+(\w+)\s+([\d.]+)'
             matches = re.match(pattern, line)
-            if matches:
+            if not matches:
                 return True
         return False
 
