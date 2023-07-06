@@ -15,7 +15,7 @@ class StoreData:
         if self.check_malformed(data):
             return {"success": False}, 500
         # match pattern
-        pattern = r'(\d+)\s+(\w+)\s+([\d.]+)'
+        pattern = r'^(\d+)\s+(\w+)\s+(\d+\.?\d*)$'
         matches = re.findall(pattern, data)
         read_exit_data = self.read_exit_data()
         for match in matches:
@@ -45,7 +45,7 @@ class StoreData:
     def check_malformed(data):
         lines = data.split("\n")
         for line in lines:
-            pattern = r'(\d+)\s+(\w+)\s+([\d.]+)'
+            pattern = r'^(\d+)\s+(\w+)\s+(\d+\.?\d*)$'
             matches = re.match(pattern, line)
             if not matches:
                 return True
